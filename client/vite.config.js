@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.md'],
   css: {
-    modules: true, // Enable CSS modules if needed
+    modules: true, 
   },
 })
