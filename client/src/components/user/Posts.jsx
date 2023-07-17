@@ -65,6 +65,14 @@ export default function Posts() {
         }
     }, [pageNo, user, deletePost]);
 
+    const appStyles = {
+        lineClamp: {
+        display: '-webkit-box',
+        WebkitLineClamp: 3,
+        WebkitBoxOrient: 'vertical',
+        overflow: 'hidden',
+        },
+    };
 
     return (
         <ThemeProvider theme={defaultTheme}>
@@ -118,7 +126,7 @@ export default function Posts() {
                                 >
                                     {post.title}
                                 </Typography>
-                                <Typography className="line-clamp">
+                                <Typography style={appStyles.lineClamp}>
                                     <span
                                     dangerouslySetInnerHTML={{
                                         __html: post.body,

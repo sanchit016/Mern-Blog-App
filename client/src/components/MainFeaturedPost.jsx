@@ -7,6 +7,14 @@ import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
 function MainFeaturedPost(props) {
+    const appStyles = {
+    lineClamp: {
+      display: '-webkit-box',
+      WebkitLineClamp: 3,
+      WebkitBoxOrient: 'vertical',
+      overflow: 'hidden',
+    },
+  };
     const { post } = props;
 
     return (
@@ -61,7 +69,7 @@ function MainFeaturedPost(props) {
                             variant="body1"
                             color="inherit"
                             paragraph
-                            className="line-clamp"
+                            style={appStyles.lineClamp}
                         >
                             <span
                                 dangerouslySetInnerHTML={{ __html: post.body }}

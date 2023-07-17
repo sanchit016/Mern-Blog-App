@@ -9,6 +9,16 @@ import CardMedia from "@mui/material/CardMedia";
 import { Link } from "react-router-dom";
 
 function FeaturedPost(props) {
+
+    const appStyles = {
+    lineClamp: {
+      display: '-webkit-box',
+      WebkitLineClamp: 3,
+      WebkitBoxOrient: 'vertical',
+      overflow: 'hidden',
+    },
+  };
+
     const { post } = props;
 
     return (
@@ -29,7 +39,7 @@ function FeaturedPost(props) {
                             <Typography
                                 variant="body2"
                                 paragraph
-                                className="line-clamp"
+                                style={appStyles.lineClamp}
                             >
                                 <span
                                     dangerouslySetInnerHTML={{
