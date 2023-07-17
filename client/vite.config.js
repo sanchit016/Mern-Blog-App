@@ -8,4 +8,11 @@ export default defineConfig({
   css: {
     modules: true, 
   },
+  middleware: (req, res, next) => {
+      // Redirect all requests to index.html
+      if (req.url !== '/' && !req.url.includes('.')) {
+        req.url = '/';
+      }
+      next();
+    },
 })
