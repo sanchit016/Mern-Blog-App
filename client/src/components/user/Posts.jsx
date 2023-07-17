@@ -23,7 +23,7 @@ const defaultTheme = createTheme();
 const blogs = async (pageNo = 1, limit = 5) => {
     const post = (
         await fetch(
-            `http://localhost:5050/blogs?pageno=${pageNo}&limit=${limit}`
+            `https://mern-blog-app-vvpv.onrender.com/blogs?pageno=${pageNo}&limit=${limit}`
         )
     ).json();
     return post;
@@ -38,7 +38,7 @@ export default function Posts() {
     const navigate = useNavigate();
     
     const deletePost = (id) => {
-        fetch(`http://localhost:5050/${id}`, {
+        fetch(`https://mern-blog-app-vvpv.onrender.com/${id}`, {
             method: "DELETE",
         });
     };

@@ -36,7 +36,7 @@ const sidebar = {
 
 const blogs = async (pageNo = 1, limit = 5) => {
     const post = (
-        await fetch(`http://localhost:5050/blogs?pageno=${pageNo}&limit=${limit}`)
+        await fetch(`https://mern-blog-app-vvpv.onrender.com/blogs?pageno=${pageNo}&limit=${limit}`)
     ).json();
     return post;
 };
