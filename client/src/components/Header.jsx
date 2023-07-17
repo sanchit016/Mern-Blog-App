@@ -7,7 +7,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import { auth } from "./user/firebase";
+import { auth } from "./firebase";
 import { useState } from "react";
 import { useEffect } from "react";
 

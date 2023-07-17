@@ -7,9 +7,9 @@ import Footer from "./Footer";
 import { Link, RouterProvider, createBrowserRouter } from "react-router-dom";
 import AllBlogs from "./AllBlogs";
 import SinglePost from "./SinglePost";
-import SignInSide from "./user/SignIn";
-import Posts from "./user/Posts";
-import CreatePost from "./user/CreatePost";
+import SignInSide from "./SignIn";
+import Posts from "./Posts";
+import CreatePost from "./CreatePost";
 
 
 const router = createBrowserRouter([
